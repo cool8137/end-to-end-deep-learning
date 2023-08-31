@@ -1,5 +1,8 @@
 # end-to-end-deep-learning
-End to end Deep Learning for Price Prediction Project
+
+End to end Deep Learning for Price Prediction Project.
+
+This was a deliverable for Manning project: https://www.manning.com/liveprojectseries/end-to-end-deep-learning-for-price-prediction
 
 ## Build
 To install python3.11, run `make install-mac` if using a mac or `make install-linux` if using a linux environment.
@@ -20,7 +23,3 @@ This repo uses raw data from New York City Airbnb Open Data in Kaggle: https://w
 Raw data is saved at: 
 * `data/AB_NYC_2019.csv`
 * `data/New_York_City_.png`
-
-## Acknowledgement
-
-This repo was created as part of project for Manning project: https://www.manning.com/liveprojectseries/end-to-end-deep-learning-for-price-prediction
