@@ -1,0 +1,43 @@
+general: # control overall operation
+   load_from_scratch: False
+   save_raw_dataframe: False
+   save_transformed_dataframe: False
+   remove_bad_values: True
+columns: # categorize columns
+   categorical: # columns with a finite set of values
+      - 'neighbourhood_group'
+      - 'neighbourhood'
+      - 'room_type'
+   continuous: # columns with values that can take an unlimited set of values
+      - 'minimum_nights'
+      - 'number_of_reviews'
+      - 'reviews_per_month'
+      - 'calculated_host_listings_count'
+      - 'latitude'
+      - 'longitude'
+   date: # date columns
+      - 'last_review'
+   text: # text columns
+      - 'name'
+      - 'host_name'
+   excluded: # columns that are not used as input features for training
+      - 'price'
+      - 'id'
+bounding_box:
+    max_long: -73.70018092
+    max_lat: 40.91617849
+    min_long: -74.25909008
+    min_lat: 40.47739894
+newark_bounding_box:
+    max_long: -74.11278706
+    max_lat: 40.67325015
+    min_long: -74.25132408
+    min_lat: 40.78813864
+geo_columns:
+    - 'latitude'
+    - 'longitude'
+file_names:
+   input_csv: ../data/AB_NYC_2019.csv
+   pickle_input_dataframe: ../data/AB_NYC_2019_input_13_sep_2023.pkl
+   pickle_output_dataframe: ../data/AB_NYC_2019_output_13_sep_2023.pkl
+   
