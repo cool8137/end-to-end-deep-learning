@@ -4,11 +4,13 @@ Utilities package to help prep data
 
 from __future__ import annotations
 
+import numpy as np
 import os
 import logging
-from typing import Dict, Optional
+from typing import Dict, Optional, Tuple
 from enum import StrEnum
 import yaml
+from sklearn.model_selection import train_test_split
 
 import pandas as pd
 
@@ -79,3 +81,11 @@ class ColumnType(StrEnum):
             col_name: ColumnType.classify_column(col, categorical_max_count, verbose)
             for col_name, col in df.items()
         }
+
+
+def train_valid_test_split(
+    X: np.Array, test_prop: float = 0.2, train_prop: float = 0.8
+) -> Tuple[np.Array, np.Array, np.Array]:
+    train_valid, test = train_test_split(X, test_size=test_prop)
+    train, valid = train_test_split(train_valid, train_size=train_prop)
+    return train, valid, test
